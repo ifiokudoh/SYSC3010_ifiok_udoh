@@ -1,5 +1,6 @@
 from sense_emu import SenseHat
 import time
+from thermometer_emu import thermometer
 
 s = SenseHat()
 s.low_light = True
@@ -48,15 +49,19 @@ def last_Initial():
   
 images = [first_Initial, last_Initial]
 count = 0
+thermo = thermometer()
+
 while True:
-  events = s.stick.get_events()
-  if events:
-    for event in events:
-      if event.action == 'pressed' and event.direction != 'middle':
-        if count == 0:
-          count = 1
-        else:
-          count = 0
+    time.sleep(1) 
+    temp = thermo.read()
+    if temp > 20:
+        count = 1
+        print("Temperature is" + str(temp) + "above 20 degress, set initial is U")
+
+    else:
+        count = 0
+        print("Temperature is" + str(temp) + "below 20 degress, set initial is I")
+
             
-        s.set_pixels(images[count]())
+    s.set_pixels(images[count]())
         
