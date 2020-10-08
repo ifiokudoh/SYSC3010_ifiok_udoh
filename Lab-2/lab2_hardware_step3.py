@@ -17,15 +17,16 @@ def first_Initial():
   G = green
   Y = yellow
   B = blue
+  R = red
   O = nothing
   logo = [
   O, O, O, O, O, O, O, O,
-  O, Y, Y, Y, Y, Y, Y, O,
-  O, O, O, Y, Y, O, O, O,
-  O, O, O, Y, Y, O, O, O,
-  O, O, O, Y, Y, O, O, O,
-  O, O, O, Y, Y, O, O, O,
-  O, Y, Y, Y, Y, Y, Y, O,
+  O, R, R, R, R, R, R, O,
+  O, O, O, R, R, O, O, O,
+  O, O, O, R, R, O, O, O,
+  O, O, O, R, R, O, O, O,
+  O, O, O, R, R, O, O, O,
+  O, R, R, R, R, R, R, O,
   O, O, O, O, O, O, O, O,
   ]
   return logo
@@ -37,12 +38,12 @@ def last_Initial():
   O = nothing
   logo = [
   O, O, O, O, O, O, O, O,
-  O, G, O, O, O, O, G, O,
-  O, G, O, O, O, O, G, O,
-  O, G, O, O, O, O, G, O,
-  O, G, O, O, O, O, G, O,
-  O, G, G, O, O, G, G, O,
-  O, O, G, G, G, G, O, O,
+  O, B, O, O, O, O, B, O,
+  O, B, O, O, O, O, B, O,
+  O, B, O, O, O, O, B, O,
+  O, B, O, O, O, O, B, O,
+  O, B, B, O, O, B, B, O,
+  O, O, B, B, B, B, O, O,
   O, O, O, O, O, O, O, O,
   ]
   return logo
